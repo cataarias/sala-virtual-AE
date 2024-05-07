@@ -11,38 +11,47 @@
     <link rel="stylesheet" href="/sala-virtual-AE/css/sala.css" />
   </head>
   <body>
-    <div class="bg opacity">
-      
+    <div class="bg">
       <a-scene embedded>
-        <!-- <a-entity environment="preset:default; groundTexture: walkernoise;"></a-entity> -->
-        <!-- Cámara -->
-        <a-entity
-          id="camera"
-          position="10 1.6 0"
-          camera
-          look-controls
-        ></a-entity>
+        <a-camera
+        position="10 1.6 0"
+        ></a-camera>
+          <!-- <a-entity
+            id="camera"
+            position="10 1.6 0"
+            camera
+            look-controls
+          ></a-entity> -->
 
-        <!-- Modelo GLB -->
-        <a-entity id="modelo" gltf-model="assets/vr_gallery/scene.gltf"
-        rotation="0 100 0" position="0 0.4 -10" scale="80 80 80">
-            </a-entity>
-        <a-entity
-          id="avatar"
-          position="0 .13 1"
-          scale=".15 .15 .15"
-          rotation="0 -130 0"
-          gltf-model="assets/662a2749dea687386fd6dcb0.glb"
-        ></a-entity>
+          <!-- Modelo GLB -->
+          <a-entity
+            id="modelo"
+            gltf-model="assets/officeAE.glb"
+            rotation="0 100 0"
+            position="0 0 0"
+            scale="80 80 80"
+          >
+          </a-entity>
+          <a-entity
+            id="avatar"
+            position="0 .13 1"
+            scale=".30 .30 .30"
+            rotation="0 -130 0"
+            gltf-model="assets/662a2749dea687386fd6dcb0.glb"
+          ></a-entity>
 
-        <!-- Luz ambiental -->
-        <a-entity light="type: ambient; color: #FFF; intensity: 0.5"></a-entity>
+          <!-- Luz ambiental -->
+          <!-- <a-entity
+            light="type: ambient; color: #FFF; intensity: 0.5"
+          ></a-entity> -->
 
-        <!-- Luz direccional -->
-        <a-entity
-          light="type: directional; color: #FFF; intensity: 1"
-          position="0.5 3 2"
-        ></a-entity>
+          <!-- Luz direccional -->
+          <!-- <a-entity
+            light="type: directional; color: #FFF; intensity: 0.7"
+            position="0.5 3 2"
+            rotation="-30 0 0"
+          ></a-entity> -->
+        
       </a-scene>
     </div>
   </body>
