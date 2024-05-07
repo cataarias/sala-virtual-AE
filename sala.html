@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala virtualt</title>
-    <link rel="stylesheet" href="/sala-virtual-AE/css/sala.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala virtual</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     <script src="/sala-virtual-AE/js/sala.js"></script>
-    
-</body>
+    <link rel="stylesheet" href="/sala-virtual-AE/css/sala.css" />
+  </head>
+  <body>
+    <div class="bg opacity">
+      
+      <a-scene embedded>
+        <!-- <a-entity environment="preset:default; groundTexture: walkernoise;"></a-entity> -->
+        <!-- Cámara -->
+        <a-entity
+          id="camera"
+          position="10 1.6 0"
+          camera
+          look-controls
+        ></a-entity>
+
+        <!-- Modelo GLB -->
+        <a-entity id="modelo" gltf-model="assets/vr_gallery/scene.gltf"
+        rotation="0 100 0" position="0 0.4 -10" scale="80 80 80">
+            </a-entity>
+        <a-entity
+          id="avatar"
+          position="0 .13 1"
+          scale=".15 .15 .15"
+          rotation="0 -130 0"
+          gltf-model="assets/662a2749dea687386fd6dcb0.glb"
+        ></a-entity>
+
+        <!-- Luz ambiental -->
+        <a-entity light="type: ambient; color: #FFF; intensity: 0.5"></a-entity>
+
+        <!-- Luz direccional -->
+        <a-entity
+          light="type: directional; color: #FFF; intensity: 1"
+          position="0.5 3 2"
+        ></a-entity>
+      </a-scene>
+    </div>
+  </body>
 </html>
